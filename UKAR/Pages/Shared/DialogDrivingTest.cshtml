@@ -1,0 +1,32 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+
+<div class="dialog-cover">
+    <form class="dialog small">
+        <div class="header">
+            <div class="title">Kết quả sát hạch</div>
+            <div class="icon icon-close"></div>
+        </div>
+        <div class="content">
+            <div class="input-wrapper">
+                <label for="test-date" title="Ngày thi sát hạch lái xe">Ngày thi: </label>
+                <input id="test-date" type="date" dataindex="date">
+            </div>
+            <div class="input-wrapper half">
+                <label for="image" title="Điểm bài thi lý thuyết">Điểm lý thuyết</label>
+                <input id="image" type="number" dataindex="examScore" value="0">
+            </div>
+            <div class="input-wrapper half">
+                <label for="image-back" title="Điểm bài thi thực hành">Điểm thực hành</label>
+                <input id="image-back" type="number" dataindex="practiceScore" value="0">
+            </div>
+        </div>
+        <div class="footer">
+            <button class="btn-cancel">Đóng</button>
+            <button class="btn-action">Lưu lại </button>
+        </div>
+    </form>
+</div>

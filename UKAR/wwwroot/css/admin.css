@@ -1,0 +1,7 @@
+
+.container .toolbar{
+    height: 40px;
+    box-shadow: 0 2px 2px -2px #4e006d;
+    align-items: center;
+    display: flex;
+}

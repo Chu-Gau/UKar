@@ -1,0 +1,75 @@
+.table{
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid #4e006d;
+    border-right: 1px solid #4e006d;
+    border-left: 1px solid #4e006d;
+}
+
+.table .header, .table .body{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.table .body{
+    overflow: auto;
+    flex: auto;
+}
+
+.table .body .body-content{
+    height: fit-content;
+    width: 100%;
+}
+
+.table .title, .table .row{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    width: fit-content;
+    border-top: 1px solid #4e006d;
+}
+
+.table .title, .table .row *{
+    transition: unset;
+}
+
+.table .title, .table .row.selected{
+    color: #fff;
+    background-color: #4e006d;
+}
+
+.table .title{
+    color: #fff;
+    background-color: #4e006d;
+}
+
+.table .title .column{
+    border-left: 1px solid #fff;
+}
+
+.table .title .column:first-child{
+    border-left: none;
+}
+
+.table .title .column>span{
+    width: 100%;
+    text-align: center;
+}
+
+.table .column{
+    display: flex;
+    width: 250px;
+    padding: 0 5px;
+    min-height: 40px;
+    align-items: center;
+}
+
+.table .column:last-child{
+    min-width: 50px;
+}

@@ -1,0 +1,32 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+
+<div class="dialog-cover">
+    <form class="dialog">
+        <div class="header">
+            <div class="title">Giấy phép lái xe</div>
+            <div class="icon icon-close"></div>
+        </div>
+        <div class="content">
+            <div class="input-wrapper">
+                <label for="license-number" title="Số giấy phép lái xe">Số GPLX</label>
+                <input id="license-number" type="text" dataindex="licenseNumber">
+            </div>
+            <div class="input-wrapper half">
+                <label for="image" title="Ảnh mặt trước giấy phép lái xe">Ảnh mặt trước GPLX</label>
+                <input id="image" type="file" dataindex="image" accept="image/png, image/jpeg">
+            </div>
+            <div class="input-wrapper half">
+                <label for="image-back" title="Ảnh mặt sau giấy phép lái xe">Ảnh mặt sau GPLX</label>
+                <input id="image-back" type="file" dataindex="imageBack" accept="image/png, image/jpeg">
+            </div>
+        </div>
+        <div class="footer">
+            <button class="btn-cancel">Đóng</button>
+            <button class="btn-action">Lưu lại </button>
+        </div>
+    </form>
+</div>

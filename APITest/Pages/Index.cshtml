@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Test API";
+}
+<div class="container-fluid">
+    <div class="col-md-12">
+        <div class="col-md-6 in highlight">
+            <h2>REQUEST</h2>
+            <div class="col-md-12">
+                <label for="url" class="col-md-12">URL</label>
+                <div class="url-display col-md-12">
+                    <environment include="Development">
+                        <input type="text" id="url" value="https://localhost:44320/" class="col-md-12">
+                    </environment>
+                    <environment exclude="Development">
+                        <input type="text" id="url" value="https://ukar.herokuapp.com/" class="col-md-12">
+                    </environment>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="radio" name="method" id="get" value="GET" checked>
+                <label for="get" class="col-md-3">GET</label>
+                <input type="radio" name="method" id="post" value="POST">
+                <label for="post" class="col-md-3">POST</label>
+                <input type="radio" name="method" id="put" value="PUT">
+                <label for="put" class="col-md-3">PUT</label>
+                <input type="radio" name="method" id="delete" value="DELETE">
+                <label for="delete" class="col-md-3">DELETE</label>
+            </div>
+            <div class="col-md-12">
+                <label for="json-request" class="col-md-12">JSON DATA</label>
+                <textarea name="json-response" id="json-request" cols="30" rows="10" class="col-md-12"></textarea>
+                <div class="json-request-display" class="col-md-12"></div>
+            </div>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-6 out">
+            <h2>RESPONSE</h2>
+            <div class="col-md-12">
+                <label for="json-request" class="col-md-12">JSON DATA</label>
+                <textarea name="json-response" id="json-response" cols="30" rows="16" class="col-md-12" readonly></textarea>
+                <div class="json-response-display" class="col-md-12"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

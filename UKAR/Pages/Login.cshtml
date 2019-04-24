@@ -1,0 +1,43 @@
+﻿@page
+@model UKAR.Pages.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UKar - Login</title>
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/login.css">
+    <link rel="stylesheet" href="~/css/tooltip.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+</head>
+<body>
+    <div class="login-dialog">
+        <div class="login-header">
+            <h1>Đăng nhập UKar</h1>
+        </div>
+        <form class="login-body">
+            <label for="user-name">Số điện thoại hoặc Email</label>
+            <input type="text" id="user-name" name="email" placeholder="Số điện thoại hoặc Email">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" placeholder="Mật khẩu">
+            <!-- <div class="remember">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Nhớ đăng nhập</label>
+            </div> -->
+
+            <button id="login" type="submit">Đăng nhập</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2019 - BETEZ Minor Team</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/login.js"></script>
+    <script src="~/js/tooltip.js"></script>
+</body>
+</html>

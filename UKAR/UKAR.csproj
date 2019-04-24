@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>fcda097e-7976-4965-94aa-e653af18e0f0</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Profile\**" />
+    <Content Remove="Profile\**" />
+    <EmbeddedResource Remove="Profile\**" />
+    <None Remove="Profile\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\DriverController.cs" />
+    <Compile Remove="Controllers\EmployerController.cs" />
+    <Compile Remove="Migrations\20190325033538_Initial.cs" />
+    <Compile Remove="Migrations\20190325033538_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20190328141249_convertEnumToString.cs" />
+    <Compile Remove="Migrations\20190328141249_convertEnumToString.Designer.cs" />
+    <Compile Remove="Migrations\20190330025013_ChangeDestinationToNullable.cs" />
+    <Compile Remove="Migrations\20190330025013_ChangeDestinationToNullable.Designer.cs" />
+    <Compile Remove="Migrations\20190330042017_removeExceedIDColumnOnActiveDriver.cs" />
+    <Compile Remove="Migrations\20190330042017_removeExceedIDColumnOnActiveDriver.Designer.cs" />
+    <Compile Remove="Migrations\20190330042309_removeExceedIDColumnOnActiveDriver2.cs" />
+    <Compile Remove="Migrations\20190330042309_removeExceedIDColumnOnActiveDriver2.Designer.cs" />
+    <Compile Remove="Migrations\20190330071338_removeExceedIDColumn.cs" />
+    <Compile Remove="Migrations\20190330071338_removeExceedIDColumn.Designer.cs" />
+    <Compile Remove="Migrations\20190330111738_remoexceed.cs" />
+    <Compile Remove="Migrations\20190330111738_remoexceed.Designer.cs" />
+    <Compile Remove="Migrations\20190405211355_addCar.cs" />
+    <Compile Remove="Migrations\20190405211355_addCar.Designer.cs" />
+    <Compile Remove="Migrations\20190405212155_addCar.cs" />
+    <Compile Remove="Migrations\20190405212155_addCar.Designer.cs" />
+    <Compile Remove="Migrations\20190418114029_changeUser.cs" />
+    <Compile Remove="Migrations\20190418114029_changeUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="localDB\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Shared\_Layout.cshtml" />
+    <None Include="wwwroot\images\banner1.svg" />
+    <None Include="wwwroot\images\banner2.svg" />
+    <None Include="wwwroot\images\banner3.svg" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\js\site.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\npm.js" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
+    <PackageReference Include="Geolocation" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+</Project>

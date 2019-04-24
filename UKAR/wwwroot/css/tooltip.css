@@ -1,0 +1,23 @@
+.tooltip {
+    padding: 10px 15px;
+    background: #4e006d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 250px;
+    color: #ebdcff;
+    line-height: 20px;
+    opacity: 0;
+    transition: opacity ease 200ms;
+}
+
+.tooltip::before{
+    content: "";
+    transform: rotate(45deg);
+    position: absolute;
+    right: 10px;
+    bottom: -3px;
+    height: 7px;
+    width: 7px;
+    background: inherit;
+}

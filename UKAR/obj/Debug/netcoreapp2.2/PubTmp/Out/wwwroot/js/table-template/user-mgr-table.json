@@ -1,0 +1,32 @@
+﻿{
+  "fullName": {
+    "title": "Họ tên",
+    "dataType": "string",
+    "width": 250
+  },
+  "role": {
+    "title": "Vai trò hiện tại",
+    "dataType": "role",
+    "width": 150
+  },
+  "email": {
+    "title": "Email",
+    "dataType": "string",
+    "width": 250
+  },
+  "phoneNumber": {
+    "title": "Số điện thoại",
+    "dataType": "string",
+    "width": 250
+  },
+  "testTime": {
+    "title": "Ngày sát hạch",
+    "dataType": "date",
+    "width": 250
+  },
+  "driverTestPassed": {
+    "title": "Trạng thái sát hạch",
+    "dataType": "driverteststate",
+    "width": 250
+  }
+}

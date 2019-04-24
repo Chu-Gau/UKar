@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UKAR.BL.BLBase">
+    <Position X="4" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>BL\BLBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="UKAR.BL.BLCar">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="BLCar" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAACAAAAAAAAAAQABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\BLCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.BL.BLLicense">
+    <Position X="6" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAgAAAAAAAAAAAAQgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\BLLicense.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.BL.BLTrip">
+    <Position X="1.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AoAAgAAAAIAhAACAAAAAAACAAQBAAAAgQAAEACBAAIA=</HashCode>
+      <FileName>BL\BLTrip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.BL.BLUser">
+    <Position X="8.5" Y="3.25" Width="1.75" />
+    <Members>
+      <Method Name="BLUser" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ggAAAADBAKAAAAAAAkAgAAAAAAAACBAQAAAAAQEAAIA=</HashCode>
+      <FileName>BL\BLUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Controllers.CarController" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Controllers\CarController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Controllers.LocationController" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\LocationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Controllers.TripController" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAgAAAAAAAAAAAAIABACAASAAAAAABAAAg=</HashCode>
+      <FileName>Controllers\TripController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Controllers.ValuesController" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAABAAAAAAAAACAEAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Controllers\ValuesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Controllers.ViewColtrollers.IndexController" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ViewColtrollers\IndexController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.ActiveDriver" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAACAAgAQAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ActiveDriver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.ActiveTrip" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGQAgCAAQQABAAgQYAAAKAIAAAgABAAgAAAgAAQAA=</HashCode>
+      <FileName>Model\ActiveTrip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.Car" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAABAAAAAAAACAAQAAAAgAAAAggAABABA=</HashCode>
+      <FileName>Model\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.DrivingLicense" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAABAAAAAAEgAAAAAAgBAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\DrivingLicense.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.DrivingTest" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhAAEABAAAAAAAAAAAAAgAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Model\DrivingTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.Trip" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGQAACAAQQABAAgQYAAAIAIAAAgABAAgAAAgAAQAA=</HashCode>
+      <FileName>Model\Trip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.User" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAABTQAIMAIEAIAQACBQAAAAAAKAQQABAAAASA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Model.UserLocation" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAUIAAAAAAAAYAAgAAGAAAAAAAACDAAAAAAA=</HashCode>
+      <FileName>Model\UserLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UKAR.Profile.UserController" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAAAAgACIAAAAAABAAAAGggQAAEAAQA=</HashCode>
+      <FileName>Controllers\UserController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="UKAR.BL.IBLBase" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BL\IBLBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

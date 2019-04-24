@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\UKAR",
+    "\\UKAR\\Controllers",
+    "\\UKAR\\DBContext",
+    "\\UKAR\\Migrations",
+    "\\UKAR\\Model"
+  ],
+  "SelectedNode": "\\UKAR\\Migrations\\20190324061346_InitialCreate.cs",
+  "PreviewInSolutionExplorer": false
+}

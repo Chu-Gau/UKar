@@ -1,0 +1,14 @@
+D:\VS projects\UKAR\UKAR\bin\Release\netcoreapp2.2\UKAR.deps.json
+D:\VS projects\UKAR\UKAR\bin\Release\netcoreapp2.2\UKAR.runtimeconfig.json
+D:\VS projects\UKAR\UKAR\bin\Release\netcoreapp2.2\UKAR.runtimeconfig.dev.json
+D:\VS projects\UKAR\UKAR\bin\Release\netcoreapp2.2\UKAR.dll
+D:\VS projects\UKAR\UKAR\bin\Release\netcoreapp2.2\UKAR.pdb
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.csproj.CoreCompileInputs.cache
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.RazorAssemblyInfo.cache
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.RazorAssemblyInfo.cs
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.AssemblyInfoInputs.cache
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.AssemblyInfo.cs
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.RazorTargetAssemblyInfo.cache
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.dll
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.pdb
+D:\VS projects\UKAR\UKAR\obj\Release\netcoreapp2.2\UKAR.csprojAssemblyReference.cache

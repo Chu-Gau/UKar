@@ -1,0 +1,52 @@
+﻿@model UKAR.Pages.AdminModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@{
+    ViewData["Title"] = "Quản trị hệ thống";
+}
+
+@section Style{
+    <link href="~/css/navpanel.css" rel="stylesheet" />
+    <link href="~/css/table.css" rel="stylesheet" />
+    <link href="~/css/Dialog.css" rel="stylesheet" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+}
+
+@section Scripts{
+    <script src="~/js/table.js"></script>
+    <script src="~/js/dialog.js"></script>
+    <script src="~/js/admin.js"></script>
+}
+
+
+<nav>
+    <ul>
+        <li id="user-mng">
+            Tài khoản người dùng
+        </li>
+        <li>
+            Theo dõi vị trí
+        </li>
+        <li>
+            Kế toán
+        </li>
+    </ul>
+</nav>
+
+<div class="nav-container">
+    <div class="toolbar">
+        <div id="page-title">
+            Quản  lý người dùng
+        </div>
+        <ul>
+            <li id="license">Bằng lái</li>
+            <li id="test-date">Đăng ký sát hạch</li>
+            <li id="driving-test">Sát hạch</li>
+            <li id="delete">Xóa</li>
+        </ul>
+    </div>
+    <div class="content">
+
+    </div>
+</div>
