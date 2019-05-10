@@ -258,5 +258,37 @@ namespace UKAR.Profile
                 return StatusCode(500, Result.UnexpectedError());
             }
         }
+
+        [HttpPost]
+        [Route("driving-test")]
+        [Authorize(Roles = Enum.RoleString.Admin)]
+        public async Task<ActionResult> UpdateDrivingTestAsync([FromBody]DrivingTest drivingTest)
+        {
+            try
+            {
+                bLLicense.UpdateDrivingTest(drivingTest);
+                return Ok(Result.Success());
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, Result.UnexpectedError());
+            }
+        }
+
+        [HttpGet]
+        [Route("driving-test/{userID}")]
+        [Authorize(Roles = Enum.RoleString.Admin)]
+        public async Task<ActionResult> GetDrivingTestAsync(string userId)
+        {
+            try
+            {
+                
+                return Ok(Result.Success(bLLicense.GetDrivingTest(userId)));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, Result.UnexpectedError());
+            }
+        }
     }
 }

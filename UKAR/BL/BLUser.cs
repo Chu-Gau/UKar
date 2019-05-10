@@ -199,7 +199,8 @@ namespace UKAR.BL
                 Email = u.Email,
                 PhoneNumber = u.PhoneNumber,
                 Role = u.Role,
-                TestTime = u.TestTime
+                TestTime = u.TestTime,
+                DriverTestPassed = u.DriverTestPassed
             }).Where(u => u.Role != Enum.RoleString.Admin).ToList();
         }
 

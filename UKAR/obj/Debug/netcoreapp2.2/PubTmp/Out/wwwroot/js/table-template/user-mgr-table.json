@@ -1,7 +1,6 @@
 ﻿{
   "fullName": {
     "title": "Họ tên",
-    "dataType": "string",
     "width": 250
   },
   "role": {
@@ -11,22 +10,22 @@
   },
   "email": {
     "title": "Email",
-    "dataType": "string",
     "width": 250
   },
   "phoneNumber": {
     "title": "Số điện thoại",
-    "dataType": "string",
-    "width": 250
+    "width": 120
   },
   "testTime": {
     "title": "Ngày sát hạch",
     "dataType": "date",
-    "width": 250
+    "width": 150,
+    "align": "center"
   },
   "driverTestPassed": {
     "title": "Trạng thái sát hạch",
     "dataType": "driverteststate",
-    "width": 250
+    "width": 150,
+    "align": "center"
   }
 }

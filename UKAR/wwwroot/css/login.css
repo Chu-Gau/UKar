@@ -16,6 +16,18 @@ body{
     color: #ebdcfff0;
 }
 
+.logo{
+    background-image: url("/images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-logo{
+    height: 100px;
+    width: 200px;
+}
+
 .login-dialog{
     width: 350px;
     height: 500px;

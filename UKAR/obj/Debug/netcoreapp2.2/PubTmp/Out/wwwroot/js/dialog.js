@@ -30,8 +30,16 @@ var Dialog = {
             //dialog.find("input[type=text]").attr("readonly", "true");
             //dialog.find("input[type=file]").attr("disabled", "true");
 
-            dialog.find("input[type=text]").each(function (index, elem) {
+            dialog.find("input[type=text], input[type=number]").each(function (index, elem) {
                 $(elem).val(data[$(elem).attr("dataindex")]);
+            });
+
+            dialog.find("input[type=date]").each(function (index, elem) {
+                var datestring = data[$(elem).attr("dataindex")];
+                if (datestring) {
+                    var date = new Date(datestring);
+                    $(elem).val(formatDate(date));
+                }
             });
 
             dialog.find("input[type=file]").each(function (index, elem) {
@@ -63,3 +71,7 @@ var Dialog = {
         }
     }
 }
+
+
+
+

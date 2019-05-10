@@ -81,14 +81,17 @@ var Table = {
 
             for (var columnTemplate in tableTemplate) {
                 var column = table.find('.column[dataindex = ' + columnTemplate + ']');
-                column.attr('dataType', tableTemplate[columnTemplate].dataType);
-                column.css('width', tableTemplate[columnTemplate].width + "px");
+                column.attr('dataType', tableTemplate[columnTemplate].dataType?tableTemplate[columnTemplate].dataType:"string");
+                column.css('width', tableTemplate[columnTemplate].width?tableTemplate[columnTemplate].width:250 + "px");
+                column.css('text-align', tableTemplate[columnTemplate].align ? tableTemplate[columnTemplate].align : "left");
                 var columnTitle = column.filter(".title *");
                 //var columnTitle = tableTitle.find('.title .column[dataindex = ' + columnTemplate + ']');
                 columnTitle.find("span").text(tableTemplate[columnTemplate].title);
                 column.show();
             }
+            Table.formatData(table.find(".body"));
         }
+
         if (typeof callback === "function") {
             callback();
         }
@@ -107,6 +110,27 @@ var Table = {
             $(this).addClass("selected");
         });
 
+    },
+    formatData: function(container) {
+        container = $(container);
+
+        //role
+        container.find("[datatype=role] span").each(function (index, field) {
+            field = $(field);
+            if (field.text() == "Driver") field.text("Lái xe");
+            else if (field.text() == "Employer") field.text("Chủ xe");
+        });
+        //driverteststate
+        container.find("[datatype=driverteststate] span").each(function (index, field) {
+            field = $(field);
+            if (field.text() == "true") field.text("Đã sát hạch");
+            else if (field.text() == "false") field.text("Chưa sát hạch");
+        });
+        //date
+        container.find("[datatype=date] span").each(function (index, field) {
+            field = $(field);
+            if (field.text()) field.text(formatDateDisplay(field.text())); 
+        });
     }
 
 }

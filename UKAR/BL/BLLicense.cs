@@ -46,5 +46,35 @@ namespace UKAR.BL
             DbContext.Users.Update(userupdate);
             DbContext.SaveChanges();
         }
+
+        public void UpdateDrivingTest(DrivingTest drivingTest)
+        {
+            var oldTest = DbContext.DrivingTests.Where(l => l.UserId == drivingTest.UserId).FirstOrDefault();
+            if (oldTest != null)
+            {
+                DbContext.DrivingTests.Remove(oldTest);
+            }
+            var user = DbContext.Users.Where(u => u.Id == drivingTest.UserId).FirstOrDefault();
+            if (drivingTest.ExamScore >= 18 && drivingTest.PracticeScore >= 18)
+            {
+                drivingTest.Passed = true;
+                user.DriverTestPassed = true;
+                user.TestTime = drivingTest.Date;
+            }
+            else
+            {
+                drivingTest.Passed = false;
+                user.DriverTestPassed = false;
+                user.TestTime = null;
+            }
+            DbContext.DrivingTests.Add(drivingTest);
+            DbContext.Users.Update(user);
+            DbContext.SaveChanges();
+        }
+
+        public DrivingTest GetDrivingTest(string userId)
+        {
+            return DbContext.DrivingTests.Where(l => l.UserId == userId).FirstOrDefault();
+        }
     }
 }

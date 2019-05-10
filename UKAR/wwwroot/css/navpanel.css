@@ -1,10 +1,10 @@
 
-nav{
+nav {
     position: absolute;
     height: 100%;
     width: 250px;
     background-color: rgb(17, 3, 29);
-    color: #fff;
+    color: #ebdcff;
     box-shadow: inset 0 5px 10px -5px #4e006d;
     overflow-y: auto;
     overflow-x: hidden;

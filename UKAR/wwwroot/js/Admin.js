@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     Navbar.globalCallback = Admin.actionByTab;
-    Admin.startUserMng();
+    $("#user-mng").trigger("click");
 });
 
 var Admin = {
@@ -35,20 +35,23 @@ var Admin = {
 
         $("#license").on("click", function () {
             var userId = $("#user-mgr-table").find(".selected").attr("dataid");
-            $.ajax({
-                url: '/user/license/' + userId,
-                dataType: 'json',
-                success: function (data) {
-                    Dialog.create(data.data, userId, "DialogLicense", function () {
-                        Admin.eventUserMngOnDialog(userId);
-                        //if (data.data) {
-                        //    $(".dialog[dataid = " + userId + "] .btn-action").hide();
-                        //} else {
-                        //    $(".dialog[dataid = " + userId + "] .btn-action").show();
-                        //}
-                    });
-                },
-            });
+            if (userId) {
+                $.ajax({
+                    url: '/user/license/' + userId,
+                    dataType: 'json',
+                    success: function (data) {
+                        Dialog.create(data.data, userId, "DialogLicense", function () {
+                            Admin.eventUserMngOnDialog(userId);
+                            //if (data.data) {
+                            //    $(".dialog[dataid = " + userId + "] .btn-action").hide();
+                            //} else {
+                            //    $(".dialog[dataid = " + userId + "] .btn-action").show();
+                            //}
+                        });
+                    },
+                });
+            }
+            
         });
 
         $("#test-date").on("click", function () {
@@ -57,7 +60,7 @@ var Admin = {
 
             for (i = 0; i < dat.length; i++) {
                 if (dat[i].id === userId) {
-                    Dialog.create(dat, userId, "DialogTestDate", function () {
+                    Dialog.create(dat[i], userId, "DialogTestDate", function () {
                         Admin.eventUserMngOnTestDateDialog(userId);
                         //if (data.data) {
                         //    $(".dialog[dataid = " + userId + "] .btn-action").hide();
@@ -72,15 +75,16 @@ var Admin = {
 
         $("#driving-test").on("click", function () {
             var userId = $("#user-mgr-table").find(".selected").attr("dataid");
-            var dat = Table["tableuser-mgr-table"].data;
-
-            for (i = 0; i < dat.length; i++) {
-                if (dat[i].id === userId) {
-                    Dialog.create(dat, userId, "DialogDrivingTest", function () {
-                        Admin.eventUserMngOnTestDateDialog(userId);
-                    });
-                    break;
-                }
+            if (userId) {
+                $.ajax({
+                    url: '/user/driving-test/' + userId,
+                    dataType: 'json',
+                    success: function (data) {
+                        Dialog.create(data.data, userId, "DialogDrivingTest", function () {
+                            Admin.eventUserMngOnDrivingTestDialog(userId);
+                        });
+                    },
+                });
             }
         });
     },
@@ -139,7 +143,36 @@ var Admin = {
                     },
                     data: JSON.stringify({
                         id: userId,
-                        testTime: $("#test-date").val()
+                        testTime: dialog.find("#test-date").val()
+                    }),
+                    success: function (result) {
+                        Dialog.remove(event.target);
+                        Admin.startUserMng();
+                    },
+                    error: function () {
+                        alert("Lỗi!");
+                    }
+                });
+        });
+    },
+    eventUserMngOnDrivingTestDialog: function (userId) {
+        $(".dialog[dataid = " + userId + "] .btn-action").click(function (event) {
+            event.preventDefault();
+            var dialog = $(this).closest(".dialog");
+            if (Dialog.checkEmpty(dialog, "date") && Dialog.checkEmpty(dialog, "examScore") && Dialog.checkEmpty(dialog, "practiceScore"))
+                $.ajax({
+                    method: 'POST',
+                    url: '/user/driving-test',
+                    dataType: 'json',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    data: JSON.stringify({
+                        userId: userId,
+                        date: dialog.find("#test-date").val(),
+                        examScore: dialog.find("#exam-score").val(),
+                        practiceScore: dialog.find("#prac-score").val()
                     }),
                     success: function (result) {
                         Dialog.remove(event.target);
